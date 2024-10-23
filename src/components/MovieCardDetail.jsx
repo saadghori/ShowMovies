@@ -10,7 +10,7 @@ export default function MovieCardDetail({imdbID}) {
     const apiKey = '86da9b3a';
 
     const { data, error } = useSWR(
-        `http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`
+        `https://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`
     );
 
     if (error) {

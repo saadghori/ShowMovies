@@ -6,7 +6,7 @@ import Error from 'next/error';
 
 export default function MovieCard({imdbID}) {
     const apiKey = '86da9b3a';
-    const {data, error} = useSWR(`http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`);
+    const {data, error} = useSWR(`https://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`);
 
     if(error){
         return <Error statusCode={404} />
