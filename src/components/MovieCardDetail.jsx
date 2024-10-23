@@ -24,9 +24,10 @@ export default function MovieCardDetail({imdbID}) {
     return (
         <Card>
             <CardImg 
-                variant="top" 
+                variant="top"
                 src={data.Poster !== 'N/A' ? data.Poster : 'https://via.placeholder.com/375x375.png?text=[+Not+Available+]'}
                 alt={data.Title || 'N/A'}
+                style={{ width: '300px', height: '500px', objectFit: 'cover' }} 
             />
             <Card.Body>
                 <Card.Title>{data.Title || 'N/A'}</Card.Title>
@@ -37,7 +38,7 @@ export default function MovieCardDetail({imdbID}) {
                     <br />
                     <strong>Plot:</strong> {data.Plot || 'N/A'}
                     <br />
-                    <strong>Rating:</strong> {data.imdbRating || 'N/A'}
+                    <strong>Rating:</strong> {data.imdbRating || 'N/A'} ({data.imdbVotes || 'N/A'} votes)
                     <br /><br />
                     <strong>Director:</strong> {data.Director || 'N/A'}
                     <br />

@@ -30,7 +30,7 @@ export default function MovieCard({imdbID}) {
                     <br />
                     <strong>Genre:</strong> {data.Genre || 'N/A'}
                     <br />
-                    <strong>Rating:</strong> {data.imdbRating || 'N/A'}
+                    <strong>Rating:</strong> {data.imdbRating || 'N/A'} ({data.imdbVotes || 'N/A'} votes)
                 </Card.Text>
                 <Link href={`/movie/${data.imdbID}`} passHref>
                     <Button variant="primary">View More</Button>
