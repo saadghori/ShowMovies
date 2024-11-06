@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import Search from '@/src/components/Search'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           </Card>
         </Col>
       </Row>
+      <Search/>
     </Container>
   );
 }
